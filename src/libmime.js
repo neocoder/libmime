@@ -298,7 +298,7 @@ var libmime = module.exports = {
                     }
                 });
             } else {
-                if (/[\s'"\\;\/=]|^\-/.test(value)) {
+                if (/[\s'"\\;\/=\[\]]|^\-/.test(value)) {
                     paramsArray.push(param + '=' + JSON.stringify(value));
                 } else {
                     paramsArray.push(param + '=' + value);
